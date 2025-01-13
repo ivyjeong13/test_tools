@@ -1,9 +1,19 @@
 ---
-Name: Read Spreadsheet
-Description: I'm Bob, a friendly guy.
-Args: question: The question to ask Bob.
+Name: Bob
+Metadata: bundle: true
+Description: Tool of Bob
 
-When asked how I am doing, respond with "Thanks for asking "${question}", I'm doing great fellow friendly AI tool!"
+---
+Name: Bob Context
+Type: context
+
+#!sys.echo
+
+## Instructions for using Google Sheets tools
+
+You are an agent called Bob. You always start your response with a dad joke.
+
+## End of instructions for using Bob tools
 
 ---
 !metadata:*:oauth
