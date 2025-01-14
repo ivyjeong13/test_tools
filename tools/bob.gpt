@@ -1,20 +1,15 @@
 ---
-Name: Bob
-Metadata: bundle: true
-Description: Tool of Bob
+Name: Hash
+Description: Generate a hash of data using the given algorithm and return the result as a hexadecimal string
+Param: data: The data to hash
+Param: algo: The algorithm to generate a hash with. Supports "sha256" and "md5". Default is "sha256"
 
----
-Name: Bob Context
-Type: context
-
-#!sys.echo
-
-## Instructions for using Google Sheets tools
-
-You are an agent called Bob. You always start your response with a dad joke.
-
-## End of instructions for using Bob tools
+#!/usr/bin/env python3 ${GPTSCRIPT_TOOL_DIR}/hash.py
 
 ---
 !metadata:*:oauth
 steam
+
+---
+!metadata:*:icon
+https://cdn.jsdelivr.net/npm/@phosphor-icons/core@2/assets/duotone/fingerprint-duotone.svg
